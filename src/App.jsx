@@ -1,23 +1,31 @@
-import { useState } from "react";
+import React, { Component } from 'react'
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import AddTicket from "./Component/AddTicket"
-function App() {
+import AddTicket from "./Component/AddTicket";
+import LifeCycle from "./Component/LifeCycle";
 
-  return (
-    <>
-      <h1>Movie Name</h1>
 
-      <AddTicket />
+export default class App extends Component {
 
-      
-      <AddTicket />
+  state ={
+    ishide:true
+  }
 
-      
-      <AddTicket />
-    </>
-  );
+  handlehide = () =>{
+    this.setState({ishide : !this.state.ishide})
+  }
+  render() {
+    return (
+      <div>
+        {this.state.ishide ?   <LifeCycle/> :null}
+
+            <button onClick={this.handlehide}>Hide</button>
+
+      </div>
+    )
+  }
 }
 
-export default App;
+
+
