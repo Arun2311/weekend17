@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import AddTicket from "./Component/AddTicket";
 import LifeCycle from "./Component/LifeCycle";
+import CounterComp from './Component/FunComp/CounterComp';
+import ApiCall from './Component/FunComp/ApiCall';
 
 
 export default class App extends Component {
@@ -18,10 +20,14 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {this.state.ishide ?   <LifeCycle/> :null}
+        {/* {this.state.ishide ?   <LifeCycle/> :null} */}
 
-            <button onClick={this.handlehide}>Hide</button>
+            {/* <button onClick={this.handlehide}>Hide</button> */}
+{/* <AddTicket/> */}
 
+{/* <CounterComp/> */}
+
+<ApiCall/>
       </div>
     )
   }
