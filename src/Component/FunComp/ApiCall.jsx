@@ -25,6 +25,10 @@ export default function ApiCall() {
     setextracount(extracount + 1);
   };
 
+
+
+  
+
   return (
     <div>
       <h1>Life Cycleusing hook its useeffect </h1>

@@ -7,6 +7,7 @@ import LifeCycle from "./Component/LifeCycle";
 import CounterComp from './Component/FunComp/CounterComp';
 import ApiCall from './Component/FunComp/ApiCall';
 import ApiCallTwo from './Component/FunComp/ApiCallTwo';
+import FormWithReact from './Component/FormWithReact';
 
 
 export default class App extends Component {
@@ -30,7 +31,9 @@ export default class App extends Component {
 
 {/* <ApiCall/> */}
 
-<ApiCallTwo/>
+{/* <ApiCallTwo/> */}
+
+<FormWithReact/>
       </div>
     )
   }
