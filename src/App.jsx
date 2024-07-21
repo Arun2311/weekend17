@@ -8,6 +8,7 @@ import CounterComp from './Component/FunComp/CounterComp';
 import ApiCall from './Component/FunComp/ApiCall';
 import ApiCallTwo from './Component/FunComp/ApiCallTwo';
 import FormWithReact from './Component/FormWithReact';
+import FormWithReactHookForm from './Component/FunComp/FormWithReactHookForm';
 
 
 export default class App extends Component {
@@ -33,7 +34,9 @@ export default class App extends Component {
 
 {/* <ApiCallTwo/> */}
 
-<FormWithReact/>
+{/* <FormWithReact/> */}
+
+<FormWithReactHookForm/>
       </div>
     )
   }
