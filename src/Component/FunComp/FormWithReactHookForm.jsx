@@ -25,9 +25,13 @@ export default function FormWithReactHookForm() {
 
         <input
           {...register("name", {
-            required: "Pls enter u r name",
-            max: 23,
-            min: 1,
+            required: "name is required",
+            
+            minLength: {
+              value: 8,
+              message:"the arun min"
+            },
+
             pattern: "A",
           })}
           placeholder="enter u r name"

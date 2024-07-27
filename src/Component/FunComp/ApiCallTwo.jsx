@@ -18,15 +18,20 @@ export default function ApiCallTwo() {
 
   return (
     <div>
-      {data.map((das, i) => (
+      {/* {data.map((das, i) => (
         <div key={i}>
           <h1>{das.title}</h1>
-          <img src={das.image}/>
+          <img src={das.image} />
           <h3>{das.price}</h3>
-
-
         </div>
-      ))}
+      ))} */}
+
+      <p className="m-4">
+        Lorem ipsum <span className="text-danger">dolor</span> sit amet consectetur, adipisicing elit. Reprehenderit
+        vel repudiandae error numquam consequuntur quasi nobis odit inventore
+        non, ab aspernatur itaque aliquam tenetur veniam rerum nam dolores
+        perferendis. Eum?
+      </p>
     </div>
   );
 }
