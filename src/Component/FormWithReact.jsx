@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form"
 
-let count = 0;
 export default function FormWithReact() {
-  count++;
 
-  console.log(count);
+
+  
+
+
+
   const [name, setname] = useState("");
   const [age, setage] = useState("");
   const [email, setemail] = useState("");

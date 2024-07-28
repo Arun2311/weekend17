@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { json, useLocation, useParams } from "react-router-dom";
 
-let count = 0;
 export default function FormWithReactHookForm() {
   const {
     register,
@@ -9,8 +9,27 @@ export default function FormWithReactHookForm() {
     formState: { errors },
   } = useForm();
 
-  count++;
-  console.log(count);
+  let { arrun } = useParams();
+
+  const location = useLocation();
+
+
+  const useQuery = () => new URLSearchParams(useLocation().search);
+
+  let query = useQuery();
+
+
+  useEffect(()=>{
+
+    let datas = query.get("data")
+
+
+
+  console.log(typeof(datas),"DSdsa");
+   
+
+  },[])
+
 
   const on = (data) => {
     console.log(data);
@@ -26,10 +45,10 @@ export default function FormWithReactHookForm() {
         <input
           {...register("name", {
             required: "name is required",
-            
+
             minLength: {
               value: 8,
-              message:"the arun min"
+              message: "the arun min",
             },
 
             pattern: "A",

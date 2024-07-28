@@ -1,8 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ApiCallTwo() {
+
+  let navigate = useNavigate();
+
   const [data, setdata] = useState([]);
+
+
 
   useEffect(() => {
     handlefetch();
@@ -15,6 +21,25 @@ export default function ApiCallTwo() {
 
     setdata(resposne?.data);
   };
+
+
+  const handlepush = ()=>{
+
+   let aaa=  JSON.stringify(data)
+    
+    navigate(`/form?arun="shdsahdhi2387347843894798"&data=${aaa}`, {state :{data:data,name:"arun"}})
+
+
+
+  }
+
+
+
+
+//   useEffect(()=>{
+//  window.location.assign("https://www.instagram.com/accounts/login")
+//   },[])
+
 
   return (
     <div>
@@ -32,6 +57,11 @@ export default function ApiCallTwo() {
         non, ab aspernatur itaque aliquam tenetur veniam rerum nam dolores
         perferendis. Eum?
       </p>
+
+
+      <div>
+        <button onClick={handlepush}>Login</button>
+    </div>
     </div>
   );
 }
