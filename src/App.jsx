@@ -13,6 +13,8 @@ import SelectDrop from "./Component/FunComp/SelectDrop";
 import { Routes, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import CounterContext from "./Component/FunComp/CounterContext";
+import { CartProvider } from "./context/CartContextApi";
 
 export default class App extends Component {
   state = {
@@ -34,7 +36,7 @@ export default class App extends Component {
         {/* <FormWithReact/> */}
 
         {/* <ApiCall/> */}
-
+        {/* 
 <div className="m-4">
 
         <Link to="/">
@@ -49,14 +51,27 @@ export default class App extends Component {
         <span className="m-2">select</span>
         
         </Link>
-        </div>
+        </div> */}
 
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<ApiCallTwo />} />
           <Route path="/form" element={<FormWithReactHookForm />} />
 
           <Route path="/select" element={<SelectDrop />} />
-        </Routes>
+        </Routes> */}
+
+        <h1>Arun</h1>
+
+
+        <CartProvider>
+
+        <CounterContext /> 
+
+
+
+
+        </CartProvider>
+
       </div>
     );
   }

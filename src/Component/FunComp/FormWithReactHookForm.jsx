@@ -13,23 +13,16 @@ export default function FormWithReactHookForm() {
 
   const location = useLocation();
 
-
   const useQuery = () => new URLSearchParams(useLocation().search);
 
+  location.state.data
   let query = useQuery();
 
+  useEffect(() => {
+    let datas = query.get("data");
 
-  useEffect(()=>{
-
-    let datas = query.get("data")
-
-
-
-  console.log(typeof(datas),"DSdsa");
-   
-
-  },[])
-
+    console.log(typeof datas, "DSdsa");
+  }, []);
 
   const on = (data) => {
     console.log(data);
